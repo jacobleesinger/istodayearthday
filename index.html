@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Today Earth Day?</title>
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+        }
+    </style>
+<body>
+    <div id="earthday"></div>
+</body>
+<script>
+    const div = document.getElementById('earthday');
+
+    const now  = new Date();
+
+    const month = now.getMonth();
+    console.log('month', month);
+    const day = now.getDate();
+
+    console.log('day', day);
+    const isEarthDay = month === 4 && day === 22;
+    const message = isEarthDay ? 'Today is Earth Day.' : 'Today is not Earth Day.';
+    div.innerHTML = message;
+</script>
+</html>
