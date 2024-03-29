@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Is Today Earth Day?</title>
     
     <style>
@@ -12,8 +14,14 @@
             align-items: center;
             font-size: 36px;
         }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
     </style>
 <body>
+    <div id="image"></div>
     <div id="earthday"></div>
 </body>
 <script>
@@ -29,5 +37,9 @@
     const isEarthDay = month === 3 && day === 22;
     const message = isEarthDay ? 'Yes' : 'No';
     div.innerHTML = message;
+
+    const imageSrc = isEarthDay ? 'happy_earth.webp' : 'sad_earth.webp';
+    const imageDiv = document.getElementById('image');
+    imageDiv.innerHTML = `<img src="${imageSrc}" alt="Earth Day">`;
 </script>
 </html>
